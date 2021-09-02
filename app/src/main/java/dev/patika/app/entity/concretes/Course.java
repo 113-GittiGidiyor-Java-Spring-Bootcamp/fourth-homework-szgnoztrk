@@ -1,5 +1,6 @@
 package dev.patika.app.entity.concretes;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -32,6 +33,7 @@ public class Course {
     @ManyToMany(mappedBy = "courses")
     List<Student> students;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "instructor_id", referencedColumnName = "instructor_id")
     Instructor instructor;

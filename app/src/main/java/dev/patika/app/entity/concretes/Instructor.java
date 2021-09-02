@@ -1,6 +1,7 @@
 package dev.patika.app.entity.concretes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,7 +32,7 @@ public class Instructor {
     @Column(name = "instructor_phone")
     private String phoneNumber;
 
-    @JsonIgnore
+    @JsonManagedReference
     @OneToMany(mappedBy = "instructor")
     private List<Course> courses;
 }
