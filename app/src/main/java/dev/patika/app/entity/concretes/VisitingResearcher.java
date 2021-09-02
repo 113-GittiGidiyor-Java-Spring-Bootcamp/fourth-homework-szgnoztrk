@@ -20,8 +20,8 @@ public class VisitingResearcher extends Instructor {
     private double hourlySalary;
 
     @Builder(builderMethodName = "VisitingResearcherBuilder")
-    public VisitingResearcher(int id, String fullName, String address, String phoneNumber, List<Course> courses, double hourlySalary) {
-        super(id, fullName, address, phoneNumber, courses);
+    public VisitingResearcher(String fullName, String address, String phoneNumber, List<Course> courses, double hourlySalary) {
+        super(fullName, address, phoneNumber, courses);
         this.hourlySalary = hourlySalary;
     }
 }

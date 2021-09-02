@@ -1,6 +1,7 @@
 package dev.patika.app.entity.concretes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import dev.patika.app.entity.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,11 +17,7 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name = "students")
-public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "student_id")
-    private int id;
+public class Student extends BaseEntity {
 
     @Column(name = "student_fullname")
     private String fullName;

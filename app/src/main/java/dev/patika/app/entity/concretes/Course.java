@@ -1,6 +1,7 @@
 package dev.patika.app.entity.concretes;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import dev.patika.app.entity.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,11 +16,7 @@ import java.util.List;
 @Entity
 @Builder
 @Table(name = "courses")
-public class Course {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "course_id")
-    private int id;
+public class Course extends BaseEntity {
 
     @Column(name = "course_name")
     private String name;
@@ -35,6 +32,6 @@ public class Course {
 
     @JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "instructor_id", referencedColumnName = "instructor_id")
+    @JoinColumn(name = "instructor_id", referencedColumnName = "id")
     Instructor instructor;
 }

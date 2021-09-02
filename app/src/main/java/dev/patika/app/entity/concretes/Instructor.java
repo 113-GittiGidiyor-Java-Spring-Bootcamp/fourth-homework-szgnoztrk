@@ -2,6 +2,7 @@ package dev.patika.app.entity.concretes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import dev.patika.app.entity.abstracts.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,11 +18,7 @@ import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "instructors")
-public class Instructor {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "instructor_id")
-    private int id;
+public class Instructor extends BaseEntity {
 
     @Column(name = "instructor_fullname")
     private String fullName;

@@ -20,8 +20,8 @@ public class PermanentInstructor extends Instructor{
     private double fixedSalary;
 
     @Builder(builderMethodName = "PermanentInstructorBuilder")
-    public PermanentInstructor(int id, String fullName, String address, String phoneNumber, List<Course> courses, double fixedSalary) {
-        super(id, fullName, address, phoneNumber, courses);
+    public PermanentInstructor(String fullName, String address, String phoneNumber, List<Course> courses, double fixedSalary) {
+        super(fullName, address, phoneNumber, courses);
         this.fixedSalary = fixedSalary;
     }
 }
