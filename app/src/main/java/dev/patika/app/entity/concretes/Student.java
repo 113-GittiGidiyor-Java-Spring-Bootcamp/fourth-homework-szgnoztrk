@@ -2,6 +2,7 @@ package dev.patika.app.entity.concretes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.patika.app.entity.abstracts.BaseEntity;
+import dev.patika.app.entity.enums.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -29,7 +30,8 @@ public class Student extends BaseEntity {
     private String address;
 
     @Column(name = "student_gender")
-    private String gender;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
     @JsonIgnore
     @ManyToMany
