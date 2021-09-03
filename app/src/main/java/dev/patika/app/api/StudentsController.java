@@ -1,11 +1,14 @@
 package dev.patika.app.api;
 
 import dev.patika.app.bussiness.abstracts.StudentService;
+import dev.patika.app.entity.concretes.Student;
 import dev.patika.app.entity.dto.StudentDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -24,6 +27,10 @@ public class StudentsController {
 
     @PostMapping
     public ResponseEntity saveStudent(@RequestBody StudentDto studentDto){
-        return new ResponseEntity(this.studentService.save(studentDto), HttpStatus.OK);
+        Optional<Student> resultOptional = this.studentService.save(studentDto);
+        if (resultOptional.isPresent())
+            return new ResponseEntity(this.studentService.save(studentDto), HttpStatus.OK);
+        else
+            return new ResponseEntity(HttpStatus.BAD_REQUEST);
     }
 }
