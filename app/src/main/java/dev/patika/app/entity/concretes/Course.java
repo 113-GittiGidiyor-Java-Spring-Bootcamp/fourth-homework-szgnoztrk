@@ -15,16 +15,12 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Builder
-@Table(name = "courses")
 public class Course extends BaseEntity {
 
-    @Column(name = "course_name")
     private String name;
 
-    @Column(name = "course_code")
     private String code;
 
-    @Column(name = "course_credit_score")
     private int creditScore;
 
     @ManyToMany(mappedBy = "courses")

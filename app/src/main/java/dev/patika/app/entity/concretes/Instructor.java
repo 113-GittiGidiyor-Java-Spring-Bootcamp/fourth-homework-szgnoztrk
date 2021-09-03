@@ -17,16 +17,12 @@ import java.util.List;
 @Builder
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "instructors")
 public class Instructor extends BaseEntity {
 
-    @Column(name = "instructor_fullname")
     private String fullName;
 
-    @Column(name = "instructor_address")
     private String address;
 
-    @Column(name = "instructor_phone")
     private String phoneNumber;
 
     @JsonManagedReference

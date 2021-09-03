@@ -17,19 +17,14 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "students")
 public class Student extends BaseEntity {
 
-    @Column(name = "student_fullname")
     private String fullName;
 
-    @Column(name = "student_birthdate")
     private LocalDate birthDate;
 
-    @Column(name = "student_address")
     private String address;
 
-    @Column(name = "student_gender")
     @Enumerated(EnumType.STRING)
     private Gender gender;
 

@@ -14,9 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "visiting_researchers")
 public class VisitingResearcher extends Instructor {
-    @Column(name = "hourly_salary")
     private double hourlySalary;
 
     @Builder(builderMethodName = "VisitingResearcherBuilder")

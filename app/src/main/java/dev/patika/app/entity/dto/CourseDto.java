@@ -2,6 +2,7 @@ package dev.patika.app.entity.dto;
 
 import dev.patika.app.entity.concretes.Instructor;
 import dev.patika.app.entity.concretes.Student;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,10 +12,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CourseDto {
-    private int id;
+    @ApiModelProperty(example = "Java Programlama")
     private String name;
+    @ApiModelProperty(example = "JAVA")
     private String code;
+    @ApiModelProperty(example = "5")
     private int creditScore;
-    List<Student> students;
-    Instructor instructor;
+    @ApiModelProperty(example = "1")
+    Long instructorId;
 }

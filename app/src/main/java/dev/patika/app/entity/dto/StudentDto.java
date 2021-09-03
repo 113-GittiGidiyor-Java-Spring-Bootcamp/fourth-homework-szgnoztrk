@@ -1,17 +1,11 @@
 package dev.patika.app.entity.dto;
 
-import dev.patika.app.entity.concretes.Course;
 import dev.patika.app.entity.enums.Gender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
