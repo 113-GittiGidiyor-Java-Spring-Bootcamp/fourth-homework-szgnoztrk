@@ -21,6 +21,9 @@ Once the application runs you should see something like this
 ```
 
 ## About the Service
+```
+http://localhost:8080/swagger-ui.html
+```
 
 ### Student Services
 
