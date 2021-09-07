@@ -48,7 +48,7 @@ public class CourseManager implements CourseService {
 
     @Override
     public Optional<Course> getById(Long id) {
-        return Optional.of(this.courseDao.getById(id));
+        return this.courseDao.findById(id);
     }
 
     @Override

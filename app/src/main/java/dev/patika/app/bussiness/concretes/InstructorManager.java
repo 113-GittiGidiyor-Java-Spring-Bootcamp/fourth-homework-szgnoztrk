@@ -42,6 +42,6 @@ public class InstructorManager implements InstructorService {
 
     @Override
     public Optional<Instructor> getById(Long id) {
-        return Optional.of(this.instructorDao.getById(id));
+        return this.instructorDao.findById(id);
     }
 }

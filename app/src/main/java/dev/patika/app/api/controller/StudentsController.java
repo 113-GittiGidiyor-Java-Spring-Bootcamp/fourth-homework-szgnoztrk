@@ -1,4 +1,4 @@
-package dev.patika.app.api;
+package dev.patika.app.api.controller;
 
 import dev.patika.app.bussiness.abstracts.StudentService;
 import dev.patika.app.entity.concretes.Student;
@@ -28,9 +28,6 @@ public class StudentsController {
     @PostMapping
     public ResponseEntity saveStudent(@RequestBody StudentDto studentDto){
         Optional<Student> resultOptional = this.studentService.save(studentDto);
-        if (resultOptional.isPresent())
-            return new ResponseEntity(this.studentService.save(studentDto), HttpStatus.OK);
-        else
-            return new ResponseEntity(HttpStatus.BAD_REQUEST);
+        return resultOptional.map(student -> new ResponseEntity(student, HttpStatus.OK)).orElseGet(() -> new ResponseEntity(HttpStatus.BAD_REQUEST));
     }
 }

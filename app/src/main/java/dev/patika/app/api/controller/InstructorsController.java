@@ -1,4 +1,4 @@
-package dev.patika.app.api;
+package dev.patika.app.api.controller;
 
 import dev.patika.app.bussiness.abstracts.InstructorService;
 import dev.patika.app.entity.dto.InstructorDto;

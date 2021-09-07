@@ -45,6 +45,6 @@ public class StudentManager implements StudentService {
 
     @Override
     public Optional<Student> getById(Long id) {
-        return Optional.of(this.studentsDao.getById(id));
+        return this.studentsDao.findById(id);
     }
 }
