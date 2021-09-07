@@ -19,3 +19,6 @@ Once the application runs you should see something like this
 2021-09-05 17:31:23.091  INFO 19387 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer  : Tomcat started on port(s): 8080 (http)
 2021-09-05 17:31:23.097  INFO 19387 --- [           main] dev.patika.app.AppApplication             : Started Application in 22.285 seconds (JVM running for 23.032)
 ```
+
+# About the Service
+
